@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for schema-lang (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id SLANG-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/schema-lang
+
+features:
+  - id: SLANG-001
+    title: "Lexer tokenizing identifiers, strings and punctuation, with tests"
+    description: "Lexer tokenizing identifiers, strings and punctuation, with tests."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: cli
+    link: Cargo.toml
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: SLANG-002
+    title: "CLI that reads a .schema file and prints tokens"
+    description: "CLI that reads a .schema file and prints tokens."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: SLANG-003
+    title: "Recursive-descent parser producing an AST"
+    description: "Recursive-descent parser producing an AST."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: SLANG-004
+    title: "Semantic checks with span-based diagnostics"
+    description: "Semantic checks with span-based diagnostics."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: SLANG-005
+    title: "Emit SCHEMA.md contracts and gitorio blueprints"
+    description: "Emit SCHEMA.md contracts and gitorio blueprints."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: SLANG-006
+    title: "Language server (LSP) for editors"
+    description: "Language server (LSP) for editors."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: cli
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: SLANG-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28

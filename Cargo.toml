@@ -1,0 +1,8 @@
+[package]
+name = "schema-lang"
+version = "0.1.0"
+edition = "2021"
+description = "DSL and compiler for gitorio/SCHEMA blueprints"
+license = "MIT"
+
+[dependencies]
