@@ -1,6 +1,6 @@
 # schema-lang
 
-> A Rust DSL and compiler for gitorio/SCHEMA blueprints: parse, type-check and emit SCHEMA.md contracts.
+> Schema Lang's direction is to become the ultimate open home for all things structural-contract languages: data, tools, resources and transparency, with a SCHEMA blueprint compiler that parses, type-checks and emits verifiable contracts for everyone ([constitution](docs/constitution.md) §1).
 
 Turn the fleet's structural contracts into a real language: a lexer, parser, checker and code generator for SCHEMA blueprints.
 
