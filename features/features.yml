@@ -19,10 +19,11 @@ features:
   - id: SLANG-002
     title: "CLI that reads a .schema file and prints tokens"
     description: "CLI that reads a .schema file and prints tokens."
-    implemented: false
-    status: planned
+    implemented: true
+    status: shipped
     prd: [FR2]
     surface: cli
+    link: src/main.rs
     docs: PRD.md
     tags: [phase-1]
     date: 2026-10-28
