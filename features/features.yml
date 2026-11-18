@@ -7,8 +7,8 @@ repo: bamr87/schema-lang
 
 features:
   - id: SLANG-001
-    title: "Lexer tokenizing identifiers, strings and punctuation, with tests"
-    description: "Lexer tokenizing identifiers, strings and punctuation, with tests."
+    title: "Lexer tokenizing identifiers, strings and punctuation, with spans and errors"
+    description: "Lexer tokenizing identifiers, strings and punctuation with source spans, string escapes, and typed errors for unterminated strings and invalid escapes, with tests."
     implemented: true
     status: shipped
     prd: [FR1]

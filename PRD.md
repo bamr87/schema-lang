@@ -75,7 +75,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 
 | ID | Feature | Status | Where | Requirements |
 | --- | --- | --- | --- | --- |
-| [SLANG-001](features/features.yml) | Lexer tokenizing identifiers, strings and punctuation, with tests | shipped | [`Cargo.toml`](Cargo.toml) | FR1 |
+| [SLANG-001](features/features.yml) | Lexer tokenizing identifiers, strings and punctuation, with spans and errors | shipped | [`Cargo.toml`](Cargo.toml) | FR1 |
 | [SLANG-002](features/features.yml) | CLI that reads a .schema file and prints tokens | planned | [`PRD.md`](PRD.md) | FR2 |
 | [SLANG-003](features/features.yml) | Recursive-descent parser producing an AST | planned | [`PRD.md`](PRD.md) | FR3 |
 | [SLANG-004](features/features.yml) | Semantic checks with span-based diagnostics | planned | [`PRD.md`](PRD.md) | FR4 |
