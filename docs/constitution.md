@@ -6,9 +6,17 @@
 > Agents read this before [AGENTS.md](../AGENTS.md) conventions, the [PRD](../PRD.md), or the
 > [feature catalog](../features/features.yml). Ratified by merged PR; amended only per § 8.
 
-## 1. Mission
+## 1. Missions
 
-Turn the fleet's structural contracts into a real language: a lexer, parser, checker and code generator for SCHEMA blueprints. It is a learning-first portfolio project in the bamr87 fleet: Compiles blueprints for bamr87/gitorio and bamr87/SCHEMA; validates against the hub's schema_lint.py rules.
+Schema Lang's direction is to become the ultimate open home for all things structural-contract languages — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, language and toolchain practitioners, and the general public.** Compiler learners, SCHEMA authors and fleet agents that consume contracts are first-class audiences. The aim is a shared, inspectable commons: the same language, the same diagnostics, and the same emitted contracts for everyone.
+2. **Turn structural contracts into a real language: a lexer, parser, checker and code generator for SCHEMA blueprints that anyone can read, type-check and compile.** Errors should carry span-based diagnostics, and the language should stay small enough to learn by building.
+3. **Compile those blueprints for gitorio and SCHEMA, and validate them against the hub's schema lint rules, so every repo's structure stays local, cheap and verifiable.** The compiler exists to make the fleet's structural contracts machine-checkable, not to invent a parallel undocumented format.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD goals: a lexer and parser for a small blueprint DSL, semantic checks with good error messages, and emission of SCHEMA.md and gitorio blueprint files.
+
+_Source: [PRD.md](../PRD.md) §1.1._
 
 ## 2. Invariants (non-negotiable)
 

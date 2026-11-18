@@ -11,6 +11,23 @@ Turn the fleet's structural contracts into a real language: a lexer, parser, che
 | Version | Date | Notes |
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
+| 0.2 | 2026-11-16 | Added §1.1 missions (amendment record in docs/amendments/). |
+
+## 1.1 Missions
+
+Schema Lang's direction is to become the ultimate open home for all things structural-contract languages — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, language and toolchain practitioners, and the general public.** Compiler learners, SCHEMA authors and fleet agents that consume contracts are first-class audiences. The aim is a shared, inspectable commons: the same language, the same diagnostics, and the same emitted contracts for everyone.
+2. **Turn structural contracts into a real language: a lexer, parser, checker and code generator for SCHEMA blueprints that anyone can read, type-check and compile.** Errors should carry span-based diagnostics, and the language should stay small enough to learn by building.
+3. **Compile those blueprints for gitorio and SCHEMA, and validate them against the hub's schema lint rules, so every repo's structure stays local, cheap and verifiable.** The compiler exists to make the fleet's structural contracts machine-checkable, not to invent a parallel undocumented format.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD goals: a lexer and parser for a small blueprint DSL, semantic checks with good error messages, and emission of SCHEMA.md and gitorio blueprint files.
+
+**Requirement**
+
+- MR1: Constitution §1 states one direction statement and exactly three numbered missions, and the README and AGENTS.md taglines match that direction and link to constitution §1.
+
+Feature [SLANG-008](features/features.yml) traces to requirement MR1.
 
 ## 2. Goals
 
@@ -65,6 +82,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [SLANG-005](features/features.yml) | Emit SCHEMA.md contracts and gitorio blueprints | planned | [`PRD.md`](PRD.md) | FR5 |
 | [SLANG-006](features/features.yml) | Language server (LSP) for editors | planned | [`PRD.md`](PRD.md) | FR6 |
 | [SLANG-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [SLANG-008](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +95,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | SLANG-005 |
 | FR6 | SLANG-006 |
 | NFR1 | SLANG-007 |
+| MR1 | SLANG-008 |
 <!-- features:end -->
