@@ -23,6 +23,17 @@ Turn the fleet's structural contracts into a real language: a lexer, parser, che
 
 Compiles blueprints for bamr87/gitorio and bamr87/SCHEMA; validates against the hub's schema_lint.py rules.
 
+## Usage
+
+```bash
+cargo run -q -- SCHEMA.blueprint          # lex a file, one token per line
+echo 'dir src {}' | cargo run -q -- -     # lex standard input
+cargo run -q -- --help                    # usage (stdout), exit 0
+cargo run -q -- -V                        # schema-lang <version>
+```
+
+Exit codes: `0` success, `1` unreadable input or a lex error (for example `1:19: unterminated string literal`), `2` usage error (no arguments, unknown option).
+
 ## Quick start
 
 ```bash
