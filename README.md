@@ -29,6 +29,10 @@ Compiles blueprints for bamr87/gitorio and bamr87/SCHEMA; validates against the 
 cargo build && cargo test
 ```
 
+## Documentation
+
+The documentation index is [docs/README.md](docs/README.md): every document in the repository, one line each.
+
 ## How it grows
 
 The roadmap lives in [PRD.md](PRD.md) and [features/features.yml](features/features.yml) (ids `SLANG-NNN`, most `status: planned`). Work arrives as pull requests from the hub's evolution and fan-out loops, the `@claude` handler, or the local `evolve` lane (off until `EVOLVE_ENABLED=true`). A human merges every PR. Rules: [docs/constitution.md](docs/constitution.md) · agent guide: [AGENTS.md](AGENTS.md).
