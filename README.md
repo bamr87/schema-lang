@@ -28,6 +28,7 @@ Compiles blueprints for bamr87/gitorio and bamr87/SCHEMA; validates against the 
 ```bash
 cargo run -q -- SCHEMA.blueprint          # lex a file, one token per line
 echo 'dir src {}' | cargo run -q -- -     # lex standard input
+echo 'dir src {}' | cargo run -q -- --spans -   # prefix each token with line:col (1:1 Ident("dir"), ...)
 cargo run -q -- --help                    # usage (stdout), exit 0
 cargo run -q -- -V                        # schema-lang <version>
 ```

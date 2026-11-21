@@ -50,7 +50,7 @@ Phases are the build order: an agent picks the earliest unserved requirement fir
 ### 4.1 Phase 1 — Foundation
 
 - FR1: Lexer tokenizing identifiers, strings and punctuation, with tests
-- FR2: CLI that reads a .schema file and prints tokens
+- FR2: CLI that reads a .schema file and prints tokens (`--spans` prefixes each with its `line:col` position)
 
 ### 4.2 Phase 2 — Core
 

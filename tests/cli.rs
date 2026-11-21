@@ -91,3 +91,26 @@ fn lex_error_exits_1_with_position() {
     assert_eq!(out.status.code(), Some(1));
     assert!(text(&out.stderr).contains("1:19: unterminated string literal"));
 }
+
+#[test]
+fn spans_prefixes_each_token_with_line_col() {
+    let out = run_stdin(&["--spans", "-"], "dir src {}");
+    assert_eq!(out.status.code(), Some(0));
+    assert_eq!(
+        text(&out.stdout),
+        "1:1 Ident(\"dir\")\n1:5 Ident(\"src\")\n1:9 Punct('{')\n1:10 Punct('}')\n"
+    );
+}
+
+#[test]
+fn spans_without_operand_exits_2() {
+    let out = bin().arg("--spans").output().unwrap();
+    assert_eq!(out.status.code(), Some(2));
+    let se = text(&out.stderr);
+    assert!(se.contains("usage: schema-lang"), "{se}");
+    assert!(
+        !se.contains("unknown option"),
+        "--spans must be a known option: {se}"
+    );
+    assert!(out.stdout.is_empty());
+}
