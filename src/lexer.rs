@@ -14,6 +14,12 @@ pub struct Span {
     pub col: usize,
 }
 
+impl fmt::Display for Span {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{}:{}", self.line, self.col)
+    }
+}
+
 /// A token together with where it starts in the source.
 #[derive(Debug, PartialEq)]
 pub struct Spanned {
@@ -37,7 +43,7 @@ pub struct LexError {
 
 impl fmt::Display for LexError {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}:{}: ", self.span.line, self.span.col)?;
+        write!(f, "{}: ", self.span)?;
         match &self.kind {
             LexErrorKind::UnterminatedString => write!(f, "unterminated string literal"),
             LexErrorKind::InvalidEscape(c) => write!(f, "invalid escape sequence '\\{}'", c),

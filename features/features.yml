@@ -18,7 +18,7 @@ features:
     date: 2026-10-28
   - id: SLANG-002
     title: "CLI that reads a .schema file and prints tokens"
-    description: "CLI that reads a .schema file and prints tokens."
+    description: "CLI that reads a .schema file and prints tokens; --spans prefixes each token with its line:col position."
     implemented: true
     status: shipped
     prd: [FR2]
